@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary Chatbot - Khan</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container-fluid d-flex flex-column h-100">
+      <header class="navbar navbar-light bg-light">
+        <div class="container">
+          <h1 class="navbar-brand">Khan's Chatbot</h1>
+          <button class="btn btn-dark ml-auto" id="toggle-theme">
+            Dark Mode
+          </button>
+          <button class="btn btn-secondary ml-2" id="change-background">
+            Change Background
+          </button>
+        </div>
+      </header>
+      <main class="flex-grow-1">
+        <div class="container">
+          <div class="chat-box">
+            <div class="message-area" id="message-area">
+              <!-- Messages will be appended here -->
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="bg-light p-3">
+        <div class="container">
+          <form id="chat-form" class="form-inline">
+            <input
+              type="text"
+              class="form-control flex-grow-1 mr-2"
+              id="user-input"
+              placeholder="Enter word for meaning..."
+              required
+            />
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Bootstrap and jQuery JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
